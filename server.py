@@ -1,4 +1,5 @@
 from socket import *
+import math
 serverPort = 12900
 
 serverSocket = socket(AF_INET, SOCK_DGRAM)
@@ -9,9 +10,9 @@ print "server is now running press ctrl c to stop it"
 
 Addition= 1
 Subtraction= 2
-Multiplication= 3
+Modulus= 3
 Division= 4
-
+Power = 5
 
 def MathOperation(message):
 
@@ -24,10 +25,12 @@ def MathOperation(message):
         return operand1 + operand2
     elif (operator == Subtraction):
         return operand2 - operand1
-    elif (operator == Multiplication):
-        return operand1 * operand2
+    elif (operator == Modulus):
+        return operand1 % operand2
     elif (operator == Division):
         return operand1 / operand2
+    elif (operator == Power):
+        return math.pow(operand1, operand2)
     else:
         return "invalid operation"
 

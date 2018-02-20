@@ -8,7 +8,8 @@ message = []
 operator = raw_input("""Welcome to the Math Space!
     Select a number for the operation!
     (1) Addition  (2) Subtraction
-    (3) Multiplication (4)Division   """)
+    (3) Modulus (4) Division 
+    (5) Power  """)
 
 message.append(operator)
 operand1 = raw_input("Enter first number")
